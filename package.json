@@ -1,0 +1,26 @@
+{
+  "name": "vitac",
+  "version": "1.0.0",
+  "description": "咕噜移动端 UI 框架",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@git.guluabc.com:f2e/vitac.git"
+  },
+  "keywords": [
+    "咕噜",
+    "vitac",
+    "移动端",
+    "UI",
+    "框架",
+    "css",
+    "less",
+    "javascript",
+    "html5"
+  ],
+  "author": "Kane",
+  "license": "ISC"
+}
