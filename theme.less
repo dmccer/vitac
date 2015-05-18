@@ -1,0 +1,68 @@
+/*******************************
+        Theme Selection
+*******************************/
+
+/* To override a theme for an individual element
+   specify theme name below
+*/
+
+/* Global */
+@site       : 'default';
+@reset      : 'default';
+
+
+/* Collection */
+@grid       : 'default';
+
+/*******************************
+            Folders
+*******************************/
+
+/* Path to theme packages */
+@themesFolder : 'theme/';
+
+/* Path to site override folder */
+@siteFolder   : 'site/';
+
+/*******************************
+        Import Directives
+*******************************/
+
+@theme : @@element;
+
+/*------------------
+   Packaged Theme
+-------------------*/
+
+@import "@{themesFolder}/@{site}/global/site.variable";
+@import "@{themesFolder}/@{theme}/@{type}/@{element}.variable";
+
+/*------------------
+     Site Theme
+-------------------*/
+
+@import "@{siteFolder}/global/site.variable";
+@import "@{siteFolder}/@{type}/@{element}.variable";
+
+
+
+/*******************************
+        Import Mix-ins
+*******************************/
+
+/*------------------
+       Fonts
+-------------------*/
+
+.loadFonts() when (@importGoogleFonts) {
+  @import (css) '@{googleProtocol}fonts.googleapis.com/css?family=@{googleFontRequest}';
+}
+
+/*------------------
+     Overrides
+-------------------*/
+
+.loadUIOverrides() {
+  @import "@{themesFolder}/@{theme}/@{type}/@{element}.override";
+  @import "@{siteFolder}/@{type}/@{element}.override";
+}
