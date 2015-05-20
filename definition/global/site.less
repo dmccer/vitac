@@ -120,6 +120,19 @@ a:hover {
 }
 
 /* Form */
+button,
+input,
+select,
+textarea {
+  font-family: @fontSize;
+}
+
+input, textarea {
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);    
+  -webkit-user-modify: read-write-plaintext-only;
+  outline: none !important;
+}
+
 textarea::selection,
 input::selection {
   background-color: @inputHighlightBackground;
@@ -128,7 +141,13 @@ input::selection {
 
 /* 禁止长按链接与图片弹出菜单 */
 a, img {
-    -webkit-touch-callout: none; 
+  -webkit-touch-callout: none; 
+}
+
+
+/* icon */
+i {
+  font-style: normal;
 }
 
 
